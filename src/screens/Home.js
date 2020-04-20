@@ -27,6 +27,7 @@ class Home extends Component {
 									counter: state.counter + 1,
 								}));
 							}}
+							bg="#F8BBD0"
 						/>
 					</div>
 				</div>

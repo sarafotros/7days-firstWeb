@@ -27,12 +27,12 @@ export default class SignIn extends Component {
 					<MyInput
 						regex={/^[a-z0-9]{2,}$/}
 						errorText="cannot include space"
-                        placeholder="username"
-                        onChange={(e) => { 
-                            this.setState({
-                                username: e.target.value
-                            })
-                        }}
+						placeholder="username"
+						onChange={(e) => {
+							this.setState({
+								username: e.target.value,
+							});
+						}}
 					/>
 					<MyInput
 						regex={/^07[0-9]{9}$/}
@@ -47,9 +47,10 @@ export default class SignIn extends Component {
 							justifyContent: 'space-around',
 						}}
 					>
-						<Btn title="Submit" onClick={this.myBtnClick} />
-                     {this.state.showMsg ? (<span> welcome {this.state.username}</span>): null}
-					
+						<Btn title="Submit" onClick={this.myBtnClick} bg="#BDBDBD" />
+						{this.state.showMsg ? (
+							<span> welcome {this.state.username}</span>
+						) : null}
 					</div>
 				</div>
 			);
