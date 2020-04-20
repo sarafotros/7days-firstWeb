@@ -4,12 +4,14 @@ class MyInput extends Component {
 
     state = {
         error: false,
-        email: '',
+        inputText: '',
     }
     render() {
-
+        const { onChange } = this.props
         let regex = this.props.regex
         let errorText = this.props.errorText
+        let placeholder = this.props.placeholder
+        let value = this.props.value
         return (
 					<div
 						style={{
@@ -23,23 +25,29 @@ class MyInput extends Component {
 						}}
 					>
 						<input
+							{...this.props}
 							onBlur={(e) => {
 								let value = e.target.value;
 								this.setState({
 									error: !regex.test(value),
-									email: value,
+									inputText: value,
 								});
 								console.log(value);
-								console.log(this.state.email);
 							}}
 							type="text"
+							placeholder={placeholder}
+							onChange={onChange}
 							style={{
 								width: '80%',
 								border: 'none',
 								borderBottom: '1px solid #000',
 							}}
-						></input>
-                {this.state.error ? <span style={{ color: 'red', fontSize: 12, marginTop: 5 }}>{errorText}</span> : null}
+						/>
+						{this.state.error ? (
+							<span style={{ color: 'red', fontSize: 12, marginTop: 5 }}>
+								{errorText}
+							</span>
+						) : null}
 					</div>
 				);
     }
