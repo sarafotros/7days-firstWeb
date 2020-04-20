@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styles from './styles'
+import styles from './styles';
+import SignIn from './SignIn'
 
 class Home extends Component {
     render() {
@@ -16,7 +17,9 @@ class Home extends Component {
                     <h2>right</h2>
                 </div>
             </div>
-            <div style={styles.main}></div>
+                <div style={styles.main}>
+                    <SignIn/>
+            </div>
             <div style={styles.footer}></div>
         </div>
 	 );

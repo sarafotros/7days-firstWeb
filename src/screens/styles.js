@@ -27,7 +27,7 @@ const styles = {
 	center: {
 		backgroundColor: '#81D4FA',
 		height: 50,
-		width: 600,
+		width: 500,
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
@@ -39,6 +39,23 @@ const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
+	},
+	main: {
+		backgroundColor: 'lightBlue',
+		display: 'flex',
+		// flex: 2,
+		height: 600,
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	form: {
+		height: 400,
+		width: 400,
+		backgroundColor: '#fff',
+		borderRadius: 10,
+		boxShadow: '2px 2px 10px #1e1e1e',
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 };
 export default styles;
