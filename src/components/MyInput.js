@@ -10,6 +10,7 @@ class MyInput extends Component {
 
         let regex = this.props.regex
         let errorText = this.props.errorText
+        let placeholder = this.props.placeholder
         return (
 					<div
 						style={{
@@ -32,7 +33,7 @@ class MyInput extends Component {
 								console.log(value);
 								console.log(this.state.email);
 							}}
-							type="text"
+							type="text" placeholder={placeholder}
 							style={{
 								width: '80%',
 								border: 'none',
